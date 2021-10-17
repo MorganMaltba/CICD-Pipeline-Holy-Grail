@@ -13,7 +13,7 @@ it('Updates value', async () => {
 
 it('Gets Data', async () => {
     const data = await request.get('/data');
-    expect(data).toBe(null);
+    expect(data).not.toBe(null);
 });
 
 var server = app.listen(3000, () => {

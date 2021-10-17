@@ -68,15 +68,15 @@ app.get('/update/:key/:value', (req, res) => {
 });
 // -------------------------------------------------------
 
-// Comment Out for Testing -------------------------------
-/*
+// Comment out for testing -------------------------------
+const port = process.env.PORT || 3000;
 
-app.listen(3000, () => {
-    console.log(`Running on Port 3000...`)
+app.listen(port, () => {
+    let runningPort = server.address().port;
+    console.log(`Running on Port ${runningPort}`)
 });
-puppetTest();
 
-*/
+//puppetTest();
 // -------------------------------------------------------
 
 module.exports = {client, app};
