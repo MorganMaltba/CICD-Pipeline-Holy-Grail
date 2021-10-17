@@ -1,11 +1,6 @@
 name: npm test
 on: [push]
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node_version: [12.x]
   container-job:
     runs-on: ubuntu-latest
     container: node:10.18-jessie
@@ -21,3 +16,7 @@ jobs:
         - run: npm install
         - run: npm run build --if-present
         - run: npm test
+      env:
+        REDIS_HOST: redis
+        REDIS_PORT: 6379
+
