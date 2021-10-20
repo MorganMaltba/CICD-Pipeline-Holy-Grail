@@ -72,8 +72,7 @@ app.get('/update/:key/:value', (req, res) => {
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
-    let runningPort = server.address().port;
-    console.log(`Running on Port ${runningPort}`)
+    console.log(`Running on Port ${port}`)
 });
 
 //puppetTest();
